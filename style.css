@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* section ทั่วไป */
+.section {
+    padding: 100px 0;
+}
+
+/* ================= Home Section ================= */
+.section-home {
+    height: 100vh;
+    background-image: url("BG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.home-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+}
+
+/* ================= Full Section ================= */
+.section-full {
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.section-full h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-full p,
+.section-full li {
+    font-size: 1.2rem;
+}
+
+/* ================= About Section ================= */
+.about-section {
+    height: 100vh;
+    background-image: url("BG2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.about-text .intro-text {
+    font-size: 1.5rem;   /* ขยายฟอนต์ */
+    line-height: 1.8;    /* อ่านสบายขึ้น */
+}
+
+
+.about-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.about-title {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.about-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* ================= Project Section ================= */
+.project-section {
+    height: 100vh;
+    background-image: url("BG3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.project-overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.project-title {
+    color: white;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+.project-name {
+    color: #f8f9fa;
+    font-size: 2rem;
+    margin: 20px 0 40px;
+}
+
+.project-img {
+    width: 100%;
+    height: 250px;          
+    object-fit: cover;      
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+.project-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact-section {
+    height: 100vh;
+    background-image: url("BG4.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.contact-overlay {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+/* Title */
+.contact-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Flip Card */
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flip when hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Front */
+.flip-card-front {
+    background: rgba(255,255,255,0.9);
+}
+
+.flip-card-front i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.flip-card-front h5 {
+    font-weight: bold;
+}
+
+/* Back */
+.flip-card-back {
+    background: linear-gradient(135deg, #f0dd99, #ffffff);
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    text-align: center;
+    padding: 20px;
+    
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flip-card-inner {
+        height: 170px;
+    }
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .section-full h2 {
+        font-size: 2rem;
+    }
+
+    .section-full p {
+        font-size: 1rem;
+    }
+
+    .about-section,
+    .project-section {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .about-img {
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-name {
+        font-size: 1.5rem;
+    }
+
+    .contact-item i {
+        font-size: 2.5rem;
+    }
+}
